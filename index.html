@@ -8,6 +8,34 @@
 </head>
 <body>
   <h1>Kanban Board</h1>
+
+  <div class="board">
+    <div class="column" id="todo" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">
+      <h2>To Do</h2>
+      <div class="add-task-area">
+        <input id="todo-input" type="text" placeholder="Add task..." />
+        <button onclick="addTask('todo')">ADD</button>
+      </div>
+      <div class="task-container"></div>
+    </div>
+
+    <div class="column" id="in-progress" ondrop="drop(event, 'in-progress')" ondragover="allowDrop(event)">
+      <h2>In Progress</h2>
+      <div class="add-task-area">
+        <input id="in-progress-input" type="text" placeholder="Add task..." />
+        <button onclick="addTask('in-progress')">ADD</button>
+      </div>
+      <div class="task-container"></div>
+    </div>
+
+    <div class="column" id="done" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">
+      <h2>Done</h2>
+      <div class="add-task-area">
+        <input id="done-input" type="text" placeholder="Add task..." />
+        <button onclick="addTask('done')">ADD</button>
+      </div>
+      <div class="task-container"></div>
+    </div>
+  </div>
 </body>
-<script type="module" src="index.js"></script>
 </html>
